@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yannick Mugisha — Portfolio
 
-## Getting Started
+A modern, animated portfolio built with **Next.js 16**, **TypeScript**, **Tailwind CSS v4**,
+**Framer Motion** (subtle animations) and **next-themes** (dark / light toggle).
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # start dev server → http://localhost:3000
+npm run build    # production build
+npm start        # serve the production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where to edit your content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All content lives in `src/data/` — no need to touch the components:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| File | What it holds |
+|------|---------------|
+| `src/data/profile.ts` | Name, role, tagline, bio, stats, email, socials, avatar & resume paths |
+| `src/data/experience.ts` | **Your professional work** (the main section) — one block per project |
+| `src/data/skills.ts` | Skill groups + tags |
 
-## Learn More
+## ✅ Things I need from you
 
-To learn more about Next.js, take a look at the following resources:
+Search the data files for `TODO` — each marks a placeholder to confirm. In particular:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Profile photo** → drop a square image at `public/profile.jpg`
+   (until then it shows your initials on a gradient — no broken image).
+2. **Resume/CV** (optional) → drop `public/resume.pdf`, or set `resume: null` in `profile.ts` to hide the button.
+3. **LinkedIn URL** → confirm in `profile.ts`.
+4. **Professional projects** in `experience.ts` — I seeded best-effort placeholders for
+   **Amaly Legacy (Spark Fundraising)**, **Health Connect** and a **Sinc** project.
+   Please correct for each: the real **title**, **org**, **role**, **dates (`period`)**,
+   **summary**, **contributions** (make them specific & measurable), **stack**, and a
+   public **`live`** link if there is one. Add or remove blocks freely.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Theming
 
-## Deploy on Vercel
+Colors are CSS variables in `src/app/globals.css` (`:root` for light, `.dark` for dark).
+Change `--accent` / `--accent-2` to re-skin the whole site.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to GitHub and import the repo on [Vercel](https://vercel.com) — zero config.
