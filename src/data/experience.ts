@@ -1,12 +1,5 @@
 /**
- * ─────────────────────────────────────────────────────────────
- *  PROFESSIONAL EXPERIENCE  —  the real roles & work from your CV.
- *  Set `featured: true` on the ones you're proudest of.
- *
- *  Note: "Health Connect" wasn't on the résumé. If it's a product you
- *  built inside one of these companies, tell me which and I'll add it
- *  (or drop in a block below and fill the fields).
- * ─────────────────────────────────────────────────────────────
+ * PROFESSIONAL EXPERIENCE. Set `featured: true` on the ones to highlight.
  */
 
 export type Project = {
@@ -30,10 +23,10 @@ export const experience: Project[] = [
     title: "Amaly Legacy",
     org: "Amaly Legacy",
     role: "Frontend Engineer",
-    period: "Jan 2024 — Present",
+    period: "Jan 2024 - Present",
     location: "Remote (Sheridan, WY · UAE)",
     summary:
-      "Fundraising technology that helps charitable organizations unlock funds. I lead front-end development of responsive, enterprise-grade product interfaces.",
+      "Fundraising platform for charitable organizations. I lead front-end development of the product interfaces.",
     contributions: [
       "Led development of responsive, component-based UIs with React.js, Next.js and styled components.",
       "Integrated GraphQL APIs and managed application state with modern libraries to improve performance.",
@@ -56,13 +49,13 @@ export const experience: Project[] = [
   },
   {
     slug: "sinc",
-    title: "Sinc — Event Management Platform",
+    title: "Sinc",
     org: "Sinc",
     role: "Frontend Engineer",
-    period: "Jan 2023 — Mar 2024",
+    period: "Jan 2023 - Mar 2024",
     location: "Remote",
     summary:
-      "An event management platform for creating, promoting and running events. I worked exclusively on the frontend, building the organizer dashboard and the public event discovery experience.",
+      "Event management platform. I worked only on the frontend: the organizer dashboard and the public discovery site.",
     contributions: [
       "Developed key frontend features for an event management platform, including the organizer dashboard and event discovery website, using Next.js, TypeScript, and TailwindCSS.",
       "Collaborated closely with the backend team on API contracts and integrated REST endpoints for events, ticketing and organizer data.",
@@ -79,10 +72,10 @@ export const experience: Project[] = [
     title: "Zetalight (SevenX)",
     org: "Zetalight (SevenX)",
     role: "Frontend Developer",
-    period: "Sep 2022 — Jan 2024",
+    period: "Sep 2022 - Jan 2024",
     location: "Kigali",
     summary:
-      "Full-time frontend developer across multiple client projects — translating Figma designs into pixel-accurate, responsive interfaces and wiring them to GraphQL APIs.",
+      "Frontend developer across several client projects, building interfaces from Figma and wiring them to GraphQL APIs.",
     contributions: [
       "Built pixel-accurate interfaces from Figma designs across multiple projects, ensuring every page stayed fully responsive on all screen sizes.",
       "Managed application state with React hooks, Context and Zustand, keeping data flow predictable as features grew.",
@@ -107,10 +100,10 @@ export const experience: Project[] = [
     title: "Solvit Africa",
     org: "Solvit Africa",
     role: "Frontend Developer Trainee",
-    period: "Jul 2022 — Sep 2022",
+    period: "Jul 2022 - Sep 2022",
     location: "Kigali",
     summary:
-      "Frontend training program covering HTML, CSS and JavaScript fundamentals, capped by a team-built chat application in the spirit of WhatsApp.",
+      "Frontend training in HTML, CSS and JavaScript, ending with a team-built chat app.",
     contributions: [
       "Completed hands-on training in HTML, CSS and JavaScript, building responsive interfaces from scratch.",
       "Collaborated with a team to build a WhatsApp-style chat application with real-time messaging and conversation views.",
@@ -126,10 +119,10 @@ export const experience: Project[] = [
     title: "Andela",
     org: "Andela",
     role: "Full-Stack Apprentice",
-    period: "Dec 2021 — Apr 2022",
+    period: "Dec 2021 - Apr 2022",
     location: "Kigali",
     summary:
-      "Full-stack apprenticeship combining structured training with real team projects across the agile product cycle.",
+      "Full-stack apprenticeship: structured training plus real team projects.",
     contributions: [
       "Built full-stack applications using React, Express, and PostgreSQL as part of structured training and team projects.",
       "Developed an e-commerce platform in a team environment, participating in code reviews, rotating leadership roles, and implementing basic testing practices.",
@@ -140,5 +133,4 @@ export const experience: Project[] = [
     live: null,
     featured: false,
   },
-  // ➕ Add "Health Connect" or other projects here when you have the details.
 ];

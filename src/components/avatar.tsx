@@ -7,7 +7,7 @@ import { profile } from "@/data/profile";
 /**
  * Shows the profile photo from `profile.avatar`. Until that file exists
  * (or if it fails to load) it gracefully falls back to initials on a
- * gradient — so the site looks intentional before you add your photo.
+ * a solid block, so the site still looks intentional.
  *
  * Served through next/image so the source JPEG gets resized and re-encoded
  * to WebP rather than shipped at full weight. It's above the fold, so it
@@ -34,8 +34,10 @@ export function Avatar({ className = "" }: { className?: string }) {
           className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
         />
       ) : (
-        <div className="grid h-full w-full place-items-center bg-gradient-to-br from-accent to-accent-2 text-white">
-          <span className="text-5xl font-semibold tracking-tight sm:text-6xl">{initials}</span>
+        <div className="grid h-full w-full place-items-center bg-accent text-white">
+          <span className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            {initials}
+          </span>
         </div>
       )}
     </div>

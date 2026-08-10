@@ -6,10 +6,16 @@ import { animate, useInView, useReducedMotion } from "framer-motion";
 /**
  * Counts a numeric value up once it scrolls into view. Preserves any
  * non-numeric prefix/suffix (e.g. "90%", "4+", "5+"). The final value is
- * rendered server-side, then the number animates on the client — so it
+ * rendered server-side, then the number animates on the client, so it
  * degrades gracefully with no JS and respects reduced motion.
  */
-export function CountUp({ value, className }: { value: string; className?: string }) {
+export function CountUp({
+  value,
+  className,
+}: {
+  value: string;
+  className?: string;
+}) {
   const match = value.match(/^(\D*)(\d+(?:\.\d+)?)(\D*)$/);
   const ref = useRef<HTMLSpanElement>(null);
   // once: false → the numbers re-count every time the strip scrolls back in

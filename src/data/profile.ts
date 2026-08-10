@@ -1,26 +1,25 @@
 /**
- * ─────────────────────────────────────────────────────────────
- *  PROFILE  —  edit everything about "you" here.
- *  Anything marked TODO is a placeholder you should confirm.
- * ─────────────────────────────────────────────────────────────
+ * PROFILE. Everything about "you" lives here.
  */
 
 export const profile = {
   name: "Yannick Mugisha",
-  // Canonical production URL — drives OG tags, sitemap and robots.
+  // Canonical production URL. Drives OG tags, sitemap and robots.
   // Set NEXT_PUBLIC_SITE_URL in your host's env to override.
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yannickmugisha.vercel.app",
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://yannick-portfolio-nu.vercel.app/",
   // Short handle used in the logo / footer
   shortName: "Yannick",
   role: "Front-End & Full-Stack Developer",
   location: "Kigali, Rwanda",
 
-  // One punchy line for the hero
+  // One line for the hero
   tagline:
-    "I turn design mockups into responsive, enterprise-grade web & mobile products — with React, Next.js and TypeScript.",
+    "I build web and mobile products with React, Next.js and TypeScript.",
 
-  // 2–3 sentences for the About section
-  bio: "I'm a Front-End & Full-Stack Developer experienced in building responsive, enterprise-grade applications with React.js, TypeScript, Node.js and React Native. I have a proven track record of transforming design mockups into engaging web and mobile experiences while collaborating with cross-functional teams. I bring expertise in GraphQL integrations, code-quality practices and agile development — consistently shipping measurable improvements.",
+  // A couple of sentences for the About section
+  bio: "I'm a frontend developer based in Kigali. For the past four years I've worked mostly in React, Next.js and TypeScript, building products for fundraising, healthcare and events. I care about interfaces that stay fast and readable as they grow.",
 
   // Availability badge in the hero ("open" shows a green dot)
   availability: "open", // "open" | "busy"
@@ -33,10 +32,8 @@ export const profile = {
     { value: "90%", label: "Traffic lift shipped" },
   ],
 
-  // Assets — drop your files in /public and keep these paths.
-  // TODO: add your photo at public/profile.jpg (a square image works best)
+  // Assets. Drop your files in /public and keep these paths.
   avatar: "/yannick_passport.JPEG",
-  // TODO (optional): add your CV at public/resume.pdf, or set to null to hide the button
   resume: "/resume.pdf",
 
   // Contact + socials. Set any value to null to hide it.

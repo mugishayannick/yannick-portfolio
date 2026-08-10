@@ -17,16 +17,19 @@ export function Contact() {
                 backgroundImage:
                   "radial-gradient(color-mix(in srgb, var(--foreground) 12%, transparent) 1px, transparent 1px)",
                 backgroundSize: "22px 22px",
-                maskImage: "radial-gradient(ellipse 70% 80% at 50% 0%, #000, transparent 75%)",
-                WebkitMaskImage: "radial-gradient(ellipse 70% 80% at 50% 0%, #000, transparent 75%)",
+                maskImage:
+                  "radial-gradient(ellipse 70% 80% at 50% 0%, #000, transparent 75%)",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 70% 80% at 50% 0%, #000, transparent 75%)",
               }}
               aria-hidden
             />
             <h2 className="relative text-3xl font-semibold tracking-tight sm:text-5xl">
-              Let&apos;s build something <span className="text-gradient">meaningful</span>.
+              Let&apos;s build something something good.
             </h2>
             <p className="relative mx-auto mt-4 max-w-lg text-base text-muted">
-              Have a project, a role, or an idea? I&apos;d love to hear about it.
+              Have a project, a role, or an idea? I&apos;d love to hear about
+              it.
             </p>
 
             <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -34,11 +37,6 @@ export function Contact() {
                 href={`mailto:${profile.email}`}
                 className="group/mail relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               >
-                {/* Light sweeps across the button on hover */}
-                <span
-                  aria-hidden
-                  className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover/mail:translate-x-full"
-                />
                 <Mail className="relative h-4 w-4 transition-transform duration-300 group-hover/mail:-rotate-12" />
                 <span className="relative">{profile.email}</span>
               </a>
@@ -68,8 +66,10 @@ export function Contact() {
 
             {profile.phone && (
               <p className="relative mt-6 text-sm text-muted">
-                Prefer a call?{" "}
-                <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="font-medium text-foreground transition-colors hover:text-accent">
+                <a
+                  href={`tel:${profile.phone.replace(/\s/g, "")}`}
+                  className="transition-colors hover:text-foreground"
+                >
                   {profile.phone}
                 </a>
               </p>

@@ -26,9 +26,9 @@ export function TechMarquee() {
         {[...items, ...items].map((t, i) => (
           <span
             key={i}
-            className="group/tech flex shrink-0 cursor-default items-center gap-3 text-lg font-medium text-muted transition-colors duration-300 hover:text-foreground"
+            className="flex shrink-0 items-center gap-3 text-sm text-muted"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-accent to-accent-2 transition-transform duration-300 group-hover/tech:scale-150" />
+            <span className="h-1 w-1 rounded-full bg-muted" />
             {t}
           </span>
         ))}

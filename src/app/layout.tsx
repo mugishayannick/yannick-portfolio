@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = `${profile.name} — ${profile.role}`;
+const title = `${profile.name} | ${profile.role}`;
 
 export const metadata: Metadata = {
   // Required so OG/twitter image paths resolve to absolute URLs
@@ -72,7 +72,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <ScrollProgress />
           <AnimatedBackground />
           {children}

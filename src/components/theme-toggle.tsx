@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Returns false during SSR and the first client render, then true — without
+// Returns false during SSR and the first client render, then true, without
 // triggering the "setState in effect" lint rule. Avoids hydration mismatch.
 function useMounted() {
   return useSyncExternalStore(
@@ -39,7 +39,11 @@ export function ThemeToggle() {
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="inline-flex"
           >
-            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            {isDark ? (
+              <Sun className="h-4 w-4" />
+            ) : (
+              <Moon className="h-4 w-4" />
+            )}
           </motion.span>
         </AnimatePresence>
       ) : (

@@ -4,14 +4,10 @@ import { profile } from "@/data/profile";
 export function Footer() {
   return (
     <footer className="relative border-t border-border">
-      {/* Hairline that fades out toward the edges */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"
-      />
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-3 px-5 py-8 text-sm text-muted sm:flex-row sm:px-8">
         <p>
-          © {new Date().getFullYear()} {profile.name}. Built with Next.js & Tailwind.
+          © {new Date().getFullYear()} {profile.name}. Built with Next.js &
+          Tailwind.
         </p>
         <a
           href="#top"

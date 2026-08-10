@@ -1,25 +1,18 @@
 /**
- * ─────────────────────────────────────────────────────────────
- *  CERTIFICATIONS
- *
- *  Skill lists are the credential's own listed skills.
- *
- *  ✍️  `issued` is still blank on both — add the month/year you earned each
- *      one (e.g. "Apr 2025") and the date chip appears automatically.
- * ─────────────────────────────────────────────────────────────
+ * CERTIFICATIONS. Skill lists come from the credential itself.
+ * `issued` is optional: fill it in and the date appears.
  */
 
 export type Certification = {
   slug: string;
   title: string;
   issuer: string;
-  /** e.g. "Mar 2025" — rendered as-is. null hides the date. */
+  /** e.g. "Mar 2025". null hides the date. */
   issued: string | null;
   summary: string;
   skills: string[];
-  /** Verification URL. null → the button is hidden. */
+  /** Verification URL. null hides the button. */
   credential: string | null;
-  gradient: [string, string];
 };
 
 export const certifications: Certification[] = [
@@ -27,9 +20,9 @@ export const certifications: Certification[] = [
     slug: "ibm-intro-software-engineering",
     title: "Introduction to Software Engineering",
     issuer: "IBM",
-    issued: null, // 👈 e.g. "Apr 2025"
+    issued: null,
     summary:
-      "The software development lifecycle end to end — architecture and design patterns, front-end and back-end development, and the process discipline that holds a codebase together.",
+      "Software development lifecycle, architecture and design patterns, front-end and back-end fundamentals.",
     skills: [
       "Software Development",
       "Application Development",
@@ -45,15 +38,14 @@ export const certifications: Certification[] = [
     ],
     credential:
       "https://www.coursera.org/account/accomplishments/verify/QAYSX3Y6L2GI",
-    gradient: ["#4f46e5", "#8b5cf6"],
   },
   {
     slug: "ibm-intro-cloud-computing",
     title: "Introduction to Cloud Computing",
     issuer: "IBM",
-    issued: null, // 👈 e.g. "Mar 2025"
+    issued: null,
     summary:
-      "Cloud models and infrastructure in practice — from virtual machines and IaaS through to serverless, microservices and hybrid cloud architecture.",
+      "Cloud service models, virtual machines and IaaS, serverless, microservices and hybrid cloud.",
     skills: [
       "Cloud Computing",
       "Cloud Services",
@@ -68,6 +60,5 @@ export const certifications: Certification[] = [
     ],
     credential:
       "https://www.coursera.org/account/accomplishments/verify/KKQ0AYI51J8W",
-    gradient: ["#0ea5e9", "#22d3ee"],
   },
 ];

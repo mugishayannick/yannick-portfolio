@@ -1,5 +1,5 @@
 /**
- *  SKILLS  —  grouped for the Skills section. Edit freely.
+ * SKILLS, grouped for the Skills section.
  */
 
 export const skillGroups: { title: string; items: string[] }[] = [

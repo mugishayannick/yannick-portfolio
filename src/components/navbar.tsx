@@ -27,7 +27,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Scroll spy — highlights the section currently occupying the viewport.
+  // Scroll spy: highlights the section currently occupying the viewport.
   // rootMargin biases toward the upper third so the pill flips at a natural point.
   useEffect(() => {
     const sections = links
@@ -53,10 +53,13 @@ export function Navbar() {
    * Mobile nav needs a managed scroll. The native anchor jump fires while the
    * open menu is still occupying height, so the browser computes the offset
    * against a layout that's about to collapse and lands in the wrong place.
-   * Close the menu first, wait for the collapse, then scroll — `scroll-mt-24`
+   * Close the menu first, wait for the collapse, then scroll. `scroll-mt-24`
    * on each section keeps it clear of the fixed header.
    */
-  function handleMobileNav(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  function handleMobileNav(
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) {
     const target = document.querySelector(href);
     if (!target) return; // let the browser handle it if the section is missing
 
@@ -64,10 +67,15 @@ export function Navbar() {
     setOpen(false);
     setActive(href);
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     // 320ms ≈ the menu's collapse duration, so we measure the settled layout
     window.setTimeout(() => {
-      target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      target.scrollIntoView({
+        behavior: reduce ? "auto" : "smooth",
+        block: "start",
+      });
     }, 320);
   }
 
@@ -80,8 +88,11 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="group flex items-center gap-2 font-semibold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-2 text-sm text-white shadow-sm transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105">
+        <a
+          href="#top"
+          className="group flex items-center gap-2 font-semibold tracking-tight"
+        >
+          <span className="grid h-8 w-8 place-items-center rounded-md bg-accent text-sm text-white">
             {profile.shortName.charAt(0)}
           </span>
           <span className="hidden sm:inline">{profile.shortName}</span>
@@ -95,7 +106,9 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 className={`relative rounded-full px-3 py-1.5 text-sm transition-colors duration-300 ${
-                  isActive ? "text-foreground" : "text-muted hover:text-foreground"
+                  isActive
+                    ? "text-foreground"
+                    : "text-muted hover:text-foreground"
                 }`}
               >
                 {/* Shared-layout pill glides between links as you scroll */}
@@ -129,7 +142,11 @@ export function Navbar() {
                 exit={{ opacity: 0, rotate: 90, scale: 0.7 }}
                 transition={{ duration: 0.18 }}
               >
-                {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+                {open ? (
+                  <X className="h-4 w-4" />
+                ) : (
+                  <Menu className="h-4 w-4" />
+                )}
               </motion.span>
             </AnimatePresence>
           </button>
