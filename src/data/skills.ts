@@ -1,31 +1,24 @@
 /**
- * SKILLS, grouped for the Skills section.
+ * TECHNOLOGIES shown in the marquee under the hero.
+ * Single source of truth now that the Skills section is gone.
  */
 
-export const skillGroups: { title: string; items: string[] }[] = [
-  {
-    title: "Frontend",
-    items: [
-      "React.js",
-      "Next.js",
-      "React Native",
-      "Angular",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
-      "HTML & CSS",
-    ],
-  },
-  {
-    title: "Backend",
-    items: ["Node.js", "GraphQL", "Express", "NestJS", "REST APIs"],
-  },
-  {
-    title: "Databases",
-    items: ["PostgreSQL", "Prisma", "MongoDB"],
-  },
-  {
-    title: "Tools & Practice",
-    items: ["Git & GitHub", "Agile", "Responsive Design", "i18n", "Vercel"],
-  },
+export const technologies: string[] = [
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "React Native",
+  "Angular",
+  "Tailwind CSS",
+  "Node.js",
+  "Express",
+  "NestJS",
+  "GraphQL",
+  "REST APIs",
+  "PostgreSQL",
+  "Prisma",
+  "MongoDB",
+  "Git",
+  "Vercel",
 ];

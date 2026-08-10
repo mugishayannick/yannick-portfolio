@@ -1,17 +1,4 @@
-const items = [
-  "React.js",
-  "Next.js",
-  "TypeScript",
-  "React Native",
-  "Tailwind CSS",
-  "GraphQL",
-  "Node.js",
-  "Angular",
-  "PostgreSQL",
-  "JavaScript",
-  "Flutter",
-  "Git",
-];
+import { technologies } from "@/data/skills";
 
 export function TechMarquee() {
   return (
@@ -23,7 +10,7 @@ export function TechMarquee() {
       {/* Pauses on hover so the strip is readable */}
       <div className="flex w-max animate-marquee gap-10 pr-10 group-hover:[animation-play-state:paused]">
         {/* Duplicated once for a seamless -50% loop */}
-        {[...items, ...items].map((t, i) => (
+        {[...technologies, ...technologies].map((t, i) => (
           <span
             key={i}
             className="flex shrink-0 items-center gap-3 text-sm text-muted"
